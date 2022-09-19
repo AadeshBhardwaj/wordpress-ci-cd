@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  parameter-store:
+    DB_NAME: "/aadesh/DB_Name"
+    DB_USER: "/aadesh/DB_User"
+    DB_PASSWORD: "/aadesh/DB_Password"
+    DB_HOST: "/aadesh/DB_Host"
+
+phases:
+  install:
+    commands:
+      - apt update -y
+      - apt install nginx -y
+      - apt install php php-fpm -y  
+  build:
+    commands:
+      - sed -i 's/database_name_here/'$DB_NAME'/' wp-config.php
+      - sed -i 's/username_here/'$DB_USER'/' wp-config.php
+      - sed -i 's/password_here/'$DB_PASSWORD'/' wp-config.php
+      - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
+      - printenv
+artifacts:
+  files:
+    - '**/*'
