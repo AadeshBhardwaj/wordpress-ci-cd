@@ -19,12 +19,6 @@ phases:
       - sed -i 's/username_here/'$DB_USER'/' wp-config.php
       - sed -i 's/password_here/'$DB_PASSWORD'/' wp-config.php
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
-      - printenv
-  post_build:
-    commands:
-      - cat wp-config.php
-      - nginx -v
-      - php -v
 artifacts:
   files:
     - '**/*'
