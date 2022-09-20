@@ -13,12 +13,15 @@ phases:
       - apt update -y
       - apt install nginx -y
       - apt install php php-fpm -y  
-  build:
+  pre_build:
     commands:
       - sed -i 's/database_name_here/'$DB_NAME'/' wp-config.php
       - sed -i 's/username_here/'$DB_USER'/' wp-config.php
       - sed -i 's/password_here/'$DB_PASSWORD'/' wp-config.php
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
+  build:
+    commands:
+      - grep -Fq "Aadesh" index.html
 artifacts:
   files:
     - '**/*'
