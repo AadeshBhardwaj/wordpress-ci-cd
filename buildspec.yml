@@ -21,7 +21,7 @@ phases:
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
   build:
     commands:
-      - grep -Fq "Aadesh" index.html
+      - ./test.sh
 artifacts:
   files:
     - '**/*'
