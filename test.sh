@@ -1,5 +1,5 @@
 #!/bin/bash
-if grep -Fq "Aadesh" index.html
+if grep -Fq "Aaaaadesh" index.html
 then
 	echo "test string find successful"
 else
