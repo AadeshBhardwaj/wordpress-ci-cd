@@ -9,12 +9,9 @@ env:
 
 phases:
   install:
-    runtime-versions:
-      php: 8.1.6
     commands:
       - apt update -y
-      - apt install nginx php-fpm -y  
-      - php -v
+      - apt install nginx php php-fpm -y
   pre_build:
     commands:
       - sed -i 's/database_name_here/'$DB_NAME'/' wp-config.php
