@@ -18,9 +18,9 @@ phases:
       - sed -i 's/username_here/'$DB_USER'/' wp-config.php
       - sed -i 's/password_here/'$DB_PASSWORD'/' wp-config.php
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
-      - curl localhost --head -o request.txt
   build:
     commands:
+      - curl localhost --head -o request.txt
       - grep -Fq "nginx" request.txt
       - grep -Fq "200 OK" request.txt
       - grep -Fq "Aadesh" index.html
