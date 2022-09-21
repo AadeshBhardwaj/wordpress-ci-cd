@@ -1,5 +1,7 @@
 version: 0.2
 
+run-as: root
+
 env:
   parameter-store:
     DB_NAME: "/aadesh/DB_Name"
