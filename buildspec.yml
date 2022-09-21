@@ -24,7 +24,7 @@ phases:
       - curl localhost:80 2>&1 --head -o request.txt
   build:
     commands:
-      - grep -Fq "Server: nginx" request.txt
+      - grep -Fq "nginx" request.txt
       - grep -Fq "200 OK" request.txt
       - grep -Fq "Aadesh" index.html
 artifacts:
