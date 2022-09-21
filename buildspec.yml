@@ -20,7 +20,7 @@ phases:
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
   build:
     commands:
-      - grep -Fq "***" wp-config.php
+      - grep -Fq "aadesh" wp-config.php
 artifacts:
   files:
     - '**/*'
