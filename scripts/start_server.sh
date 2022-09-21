@@ -1,2 +1,7 @@
 #!/bin/bash
-systemctl start nginx
+isNotExistService="pgrep nginx"
+
+if [[ $isNotExistService ]];
+then
+	sudo systemctl start nginx
+fi

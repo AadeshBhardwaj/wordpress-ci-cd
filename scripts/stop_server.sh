@@ -1,2 +1,6 @@
 #!/bin/bash
-systemctl stop nginx
+isExistService="pgrep nginx"
+if [[ $isExistService ]];
+then
+	sudo systemctl stop nginx
+fi
