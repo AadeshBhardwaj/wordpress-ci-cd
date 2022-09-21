@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown www-data:www-data /var/www/wordpress
+sudo chown www-data:www-data /var/www/html
