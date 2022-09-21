@@ -20,9 +20,6 @@ phases:
       - sed -i 's/localhost/'$DB_HOST'/' wp-config.php
   build:
     commands:
-      - curl localhost --head -o request.txt
-      - grep -Fq "nginx" request.txt
-      - grep -Fq "200 OK" request.txt
       - grep -Fq "Aadesh" index.html
 artifacts:
   files:
