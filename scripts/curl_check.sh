@@ -1,2 +1,3 @@
 #!/bin/bash
-curl localhost:80 --head | grep "wordpress"
+cat wp-config.php
+curl localhost:80 --head | grep "500"
