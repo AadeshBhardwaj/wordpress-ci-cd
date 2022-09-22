@@ -13,7 +13,6 @@ phases:
   install:
     commands:
       - apt update -y
-      - apt install nginx php php-fpm -y
   pre_build:
     commands:
       - sed -i 's/database_name_here/'$DB_NAME'/' wp-config.php
