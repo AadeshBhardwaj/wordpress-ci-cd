@@ -1,3 +1,3 @@
 #!/bin/bash
 cat wp-config.php
-curl localhost:80 --head | grep "500"
+curl localhost:80 --head | grep "OK"
