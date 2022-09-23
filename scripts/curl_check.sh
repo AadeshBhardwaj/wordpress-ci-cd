@@ -1,2 +1,2 @@
 #!/bin/bash
-curl localhost:80 --head
+curl localhost --head | grep "302 Found"
