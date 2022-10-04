@@ -1,2 +1,2 @@
 #!/bin/bash
-curl localhost --head | grep "200 OK"
+#curl localhost --head | grep "302"
